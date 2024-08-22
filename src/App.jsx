@@ -11,23 +11,23 @@ function App() {
   /*  State pour envoyer un message d'erreur si les 2 mdp ne sont pas identiques : de base sur false et passera true en cas de différence*/
   const [errorMessage, setErrormessage] = useState(false);
 
+  const handleSubmit = (event) => {
+    /* on empêche le rafraichissement de la page */
+    event.preventDefault();
+    /* Comparaison des mdp */
+    if (password === passwordCheck) {
+      setErrormessage(false);
+      alert("Votre formulaire a bien été envoyé");
+    } else {
+      setErrormessage(true);
+    }
+  };
+
   return (
     <main>
       <div>
         <h1>Create an account</h1>
-        <form
-          onSubmit={(event) => {
-            /* on empêche le rafraichissement de la page */
-            event.preventDefault();
-            /* Comparaison des mdp */
-            if (password === passwordCheck) {
-              setErrormessage(false);
-              alert("Votre formulaire a bien été envoyé");
-            } else {
-              setErrormessage(true);
-            }
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <label>
             Name
             <input
