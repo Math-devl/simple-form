@@ -36,6 +36,7 @@ function App() {
                 //On veut stocker ce qu'on reçoit dans l'input dans la variable correspondante à l'input : ici Name
                 name = setName(event.target.value);
               }}
+              placeholder="Jean Dupont"
               type="text"
               name="name"
               value={name}
@@ -49,6 +50,7 @@ function App() {
                 //On veut stocker ce qu'on reçoit dans l'input dans la variable correspondante à l'input : ici email
                 email = setEmail(event.target.value);
               }}
+              placeholder="jeandup@gmail.com"
               type="email"
               name="email"
               value={email}
@@ -62,6 +64,7 @@ function App() {
                 //On veut stocker ce qu'on reçoit dans l'input dans la variable correspondante à l'input : ici password
                 password = setPassword(event.target.value);
               }}
+              placeholder="Azerty@98"
               type="password"
               name="password"
             />
@@ -74,6 +77,7 @@ function App() {
                 //On veut stocker ce qu'on reçoit dans l'input dans la variable correspondante à l'input : confirmer password
                 name = setPasswordCheck(event.target.value);
               }}
+              placeholder="Azerty@98"
               type="password"
               name="password"
             />
